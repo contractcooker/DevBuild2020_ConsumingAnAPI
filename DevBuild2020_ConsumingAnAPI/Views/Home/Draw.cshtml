@@ -1,0 +1,17 @@
+﻿@model Hand
+
+@{
+    ViewData["Title"] = "Draw Cards";
+    int numItems = Model.Cards.Length;
+}
+
+<h1>This is your hand</h1>
+<ul>
+    @for (int i = 0; i < numItems; i++)
+    {
+        <li>
+            @Model.Cards[i].value of @Model.Cards[i].suit <br/>
+            <img src="@Model.Cards[i].image"/>
+        </li>
+    }
+</ul>
